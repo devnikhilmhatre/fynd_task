@@ -1,0 +1,67 @@
+###
+# Hit http://127.0.0.1:8000/api-movies/ this api first this will load all data from json 
+# file into the respective database.
+
+# Page start with 0 | will return first 10 records
+
+# update / delete and get request requiers pk
+
+# genre in create and update takes array of [ genre pk ]
+###
+
+
+### Hit this api only once in order to load all data from json file to respective database
+
+GET http://127.0.0.1:8000/api-movies/
+
+###
+
+
+GET http://127.0.0.1:8000/api-movies/list?page=0 HTTP/1.1
+
+### 
+
+
+GET http://127.0.0.1:8000/api-movies/one/1/ HTTP/1.1
+
+###
+
+
+POST  http://127.0.0.1:8000/api-movies/create/ HTTP/1.1
+Authorization: Token 1106f8998bb2fb1d9a3296db4d6a42d1db806b50
+content-type: application/json
+
+{
+    "name":"New Movie",
+    "popularity":8.0,
+    "director":"New Director",
+    "imdb_score":8.3,
+    "genre":[1,3]
+}
+
+### 
+
+
+PUT  http://127.0.0.1:8000/api-movies/update/255/ HTTP/1.1
+Authorization: Token 1106f8998bb2fb1d9a3296db4d6a42d1db806b50
+content-type: application/json
+
+{
+    "name":"New Movie 2",
+    "popularity":8.0,
+    "director":"New Director 2",
+    "imdb_score":8.3,
+    "genre":[7]
+}
+
+###
+
+
+DELETE   http://127.0.0.1:8000/api-movies/delete/254/ HTTP/1.1
+Authorization: Token 1106f8998bb2fb1d9a3296db4d6a42d1db806b50
+content-type: application/json
+
+### Search api
+
+
+GET http://127.0.0.1:8000/api-movies/search/8/

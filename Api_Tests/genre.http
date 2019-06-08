@@ -1,0 +1,35 @@
+###
+# update / delete and get request requiers pk
+###
+
+GET http://127.0.0.1:8000/api-genres/list/ HTTP/1.1
+
+###
+GET http://127.0.0.1:8000/api-genres/one/1/ HTTP/1.1
+
+###
+
+POST  http://127.0.0.1:8000/api-genres/create/ HTTP/1.1
+Authorization: Token 9ba73967550bcfa9d39832dbe0f046b9f4c65c79
+content-type: application/json
+
+{
+    "name":"Test"
+}
+
+
+###
+
+PUT  http://127.0.0.1:8000/api-genres/update/47/ HTTP/1.1
+Authorization: Token 9ba73967550bcfa9d39832dbe0f046b9f4c65c79
+content-type: application/json
+
+{
+    "name":"Test 2"
+}
+
+###
+
+DELETE   http://127.0.0.1:8000/api-genres/delete/47/ HTTP/1.1
+Authorization: Token 9ba73967550bcfa9d39832dbe0f046b9f4c65c79
+content-type: application/json

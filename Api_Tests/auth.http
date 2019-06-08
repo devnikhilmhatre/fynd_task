@@ -1,0 +1,17 @@
+###
+# login will return token which can be used for All Create, Update and Delete operation
+###
+
+POST http://127.0.0.1:8000/api-auth/login/ HTTP/1.1
+content-type: application/json
+
+{
+    "username": "code",
+    "password": "Code@123"
+}
+
+
+###
+
+GET http://127.0.0.1:8000/api-auth/logout/ HTTP/1.1
+Authorization: Token 56e1f70725bc019d45474654168c78b2404d244f

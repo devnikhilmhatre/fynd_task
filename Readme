@@ -1,0 +1,15 @@
+Prerequisite:
+pipenv (pip3 install pipenv)
+vscode | REST Client extension by Huachao Mao
+
+-----------------------------------------
+
+1. git clone https://github.com/devnikhilmhatre/fynd-task
+2. cd fynd-task
+3. pipenv install
+4. pipenv shell
+5. python manage.py runserver (This command will start development server)
+6. Open vscode and navigate to Api_Tests folder.
+7. With http files in Api_Tests folder you can easily test all the available apis. 
+   (Extension need or can use post)
+8. Start with movies.http and hit http://127.0.0.1:8000/api-movies/ api first.

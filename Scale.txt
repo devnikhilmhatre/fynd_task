@@ -1,0 +1,21 @@
+In order to scale to this application to handle more requests per day
+
+* If its not on the cloud (aws, gcp, azure), move this app to cloud first.
+
+* We need scale hardware horizontally as well as vertically.
+    Horizontal scaling
+    - Having multiple instances of app running on the server.
+    - We need load balancer in order to handle this.
+    
+    Vertical scaling
+    - Increasing hardware requirements (memory, cpu)
+
+* Using sql lite for production is not good enough.
+  we need more mature database which can be MySql or Postgresql
+
+* We can use redis to save authenticated users. 
+  This will save database hit which django performs while checking permissions.
+
+* We can try master slave architecure here.
+  This will slower down the create, update, delete queries, 
+  but will improve fetching data and fault tolerance of the system.  
