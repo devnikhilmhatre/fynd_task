@@ -4,12 +4,13 @@ vscode | REST Client extension by Huachao Mao
 
 -----------------------------------------
 
-1. git clone https://github.com/devnikhilmhatre/fynd-task
+1. git clone https://github.com/devnikhilmhatre/fynd_task
 2. cd fynd-task
 3. pipenv install
 4. pipenv shell
 5. python manage.py runserver (This command will start development server)
 6. Open vscode and navigate to Api_Tests folder.
 7. With http files in Api_Tests folder you can easily test all the available apis. 
-   (Extension need or can use post)
+   (Extension needed or can use Postman App)
 8. Start with movies.http and hit http://127.0.0.1:8000/api-movies/ api first.
+   (This will load all data from json to database)
